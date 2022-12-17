@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class="bx bx-chevrons-up scrolltop__icon"></i> 
+    </a>
+
+    <header class="i-header " id="header">
+        <nav class="nav bd-container">
+            <img src="img/logo.png" alt="" class="nav__logo">
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" >Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="i-main">
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h2 class="home__subtitle title"> Find The Best Recipe For Your Meal</h2>
+                    <blockquote>Good food is fuel for the body <br>
+                        <cite>Malcom Forbes</cite>
+                    </blockquote>
+                </div>
+                <img src="img/pic2.png" alt="" class="homeimg">
+            </div> 
+        </section>
+    </main>
+    
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Search for recipes" id="search-input">
+                    <button type="submit" class="search-btn btn" id="search-btn">
+                        <!-- <i class="fas fa-search"></i> --> Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                <div id= "meal">
+                    <!-- <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="img/pic1.png" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Jollof Rice</h3>
+                            <a href="#" class="recipe-btn">Check Recipe</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+            <div class="meal-details">
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="meal-details-content">
+                    <!-- <h2 class="recipe-title">Meals Name Here</h2>
+                    <p class="recipe-category">Category Name</p>
+                    <div class="recipe-instruction">
+                        <h3>Instructions:</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur 
+                            adipisicing elit. Magni, distinctio quam 
+                            temporibus autem vitae facere assumenda, 
+                            cum quo consequuntur omnis blanditiis 
+                            maiores neque molestiae? Perspiciatis 
+                            eius id labore mollitia possimus?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur 
+                            adipisicing elit. Magni, distinctio quam 
+                            temporibus autem vitae facere assumenda, 
+                            cum quo consequuntur omnis blanditiis 
+                            maiores neque molestiae? Perspiciatis 
+                            eius id labore mollitia possimus?
+                        </p>
+
+                    </div>
+                    <div class="recipe-meal-img">
+                        <img src="img/pic1.png" alt="">
+                    </div>
+                    <div class="recipe-link">
+                        <a href="#" target="_blank">Watch Video</a>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

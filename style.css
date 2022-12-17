@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+
+main{
+    margin-top: 5rem;
+}
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.text{
+    opacity: 0.8;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    min-height: 100vh;
+}
+.meal-wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+.meal-search{
+    padding-top: .5rem;
+    background: #fff;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.883);
+    height: 120px;
+}
+
+.meal-search cite{
+    font-size: 1rem;
+}
+.meal-search-box{
+    margin: 1.2rem 0;
+    display: flex;
+    margin-top: rem;
+    align-items: stretch;
+}
+.search-control,
+.search-btn{
+    width: 100%;
+}
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    font-family: inherit;
+    outline: 0;
+    border: 2px solid #000;
+}
+.search-btn{
+    width: 200px;
+    height: 65px;
+    border: 3px solid #000;
+    font-size: 1.8rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.search-btn:hover{
+    background: rgb(32, 31, 31);
+}
+.meal-result{
+    margin-top: 4rem;
+}
+.meal-item{
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+.meal-img img{
+    width: 100%;
+    display: block;
+}
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+    font-size: 1.4rem;
+}
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    transition: all 0.4s linear ;
+}
+.recipe-btn:hover{
+    background: rgb(23, 23, 23);
+}
+
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform:  translate(-50%, -50%);
+    -o-transform:  translate(-50%, -50%);
+    color: #fff;
+    background: #000;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+}
+
+.meal-details::-webkit-scrollbar{
+    width: 5px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+
+}
+.showRecipe{
+    display: block;
+}
+
+.meal-details-content{
+    margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+.recipe-category{
+    font-weight: 600;
+}
+.recipe-instruction{
+    padding: 1rem 0;
+}
+.recipe-meal-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.recipe-link{
+    margin: 1.4rem 0;
+}
+.recipe-link a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+.notFound{
+    grid-template-columns: 1fr!important;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+
+.section{
+    padding: 4rem 0 2rem;
+}
+.bd-container{
+    max-width:960px;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.i-header{
+  width: 100%;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:  100;
+  background-color: #fbfbfe;
+}
+
+.nav{
+    max-width: 1024px;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__item{
+    margin-bottom: 1rem;
+}
+
+.nav__link{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav__logo{
+    height: 50px;
+    width: 70px;
+}
+
+.nav__toggle{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+
+.scroll-header{
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.scrolltop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    background: #000;
+    border-radius: .4rem;
+    z-index: 10;
+    transition: .4s;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+.scrolltop:hover{
+    background-color: rgb(35, 34, 34);
+}
+
+.scrolltop__icon{
+    font-size: 1.8rem;
+    color: #fbfbfe;
+}
+
+.scroll-top{
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+.home__container{
+    align-content: center;
+    max-width: 100%;
+    height: auto;
+}
+.home__subtitle{
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+.home img{
+    margin-top: 2rem;
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color:#fbfbfe;
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0,0,0,.1);
+        border-radius: 0 0 1rem 1rem;
+        z-index:100;
+    }
+    .meal-search{
+        box-shadow: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .meal-result h2{
+        font-size: 1.5rem;
+    }
+    .search-btn{
+        font-size: 1.2rem;
+    }
+} 
+
+.show-menu{
+    top: 4rem   ;
+}
+
+
+@media screen and (min-width: 600px){
+    .meal-search-box{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    main{
+        margin-top: 10rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+   
+
+}
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .home img{
+        transform: rotate(-90deg);
+        height: 400px;
+        width: 200px;
+        margin-top: -7rem;
+    }
+    main{
+        margin-top: 15rem;
+        height: 40vh;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+    .section{
+        padding-top: 8rem;
+    }
+
+    .nav{
+        height: calc(3rem + 1.5rem);
+    }
+    .nav__list{
+        display: flex;
+    }
+    .nav__item{
+        margin-left: 2.5rem;
+        margin-bottom: 0;
+    }
+    .home__subtitle{
+        font-size: 25px;
+        width: 60%;
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+
+    .home__container{
+        height: 100vh;
+        margin-top: 30rem;
+        display: flex;
+        justify-items: center;
+    }
+    .container{
+        margin-top: -6rem;
+    }
+  
+}
+
+@media screen and (min-width: 992px) {
+    main{
+        margin-top: 12rem;
+        height: 40vh;
+    }
+    
+    #meal{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+@media screen and (min-width:960px){
+    
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__subtitle{
+        font-size: 40px;
+        width: 80%;
+    }
+    .home img{
+        width: 400px;
+        margin-top: -11rem;
+        height: 600px;
+    }
+    .meal-search{
+        width: 50vw;  
+        margin: 0 auto;
+        width: 100%;
+        height: 100px;
+        padding-top:0.1rem;
+    }
+    .container{
+        margin-top: 0rem;
+    }
+   
+}
